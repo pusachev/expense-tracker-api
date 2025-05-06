@@ -1,0 +1,33 @@
+### GET request all categories
+GET {{api_url}}/api/categories
+###
+
+### POST request add categorie
+POST {{api_url}}/api/categories
+Content-Type: application/json
+
+{
+  "name": "Education"
+}
+###
+
+### GET request all expenses
+GET {{api_url}}/api/expenses
+###
+
+### POST request add expense
+POST {{api_url}}/api/expenses
+Content-Type: application/json
+
+{
+  "description": "Books",
+  "amount": 2500,
+  "date": "2023-05-15T10:00:00",
+  "category_id": 6,
+  "payment_method": "Card"
+}
+###
+
+### GET request expenses stats
+GET {{api_url}}/api/expenses/stats
+###
