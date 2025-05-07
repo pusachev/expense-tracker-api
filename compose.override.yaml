@@ -1,6 +1,19 @@
 
 services:
-###> doctrine/doctrine-bundle ###
+  php-fpm:
+    image: pusachev/php-fpm:8.4
+    ports:
+      - "9000:9000"
+      - "9003:9003"
+      - "8000:8000"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      PHP_IDE_CONFIG: "serverName=docker"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  ###> doctrine/doctrine-bundle ###
   database:
     ports:
       - "5432:5432"
